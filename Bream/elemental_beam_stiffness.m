@@ -1,0 +1,9 @@
+function k = Elemental_Beam_Stiffness(coord, E, I)
+  x1 = coord(1,1);
+  x2 = coord(2,1);
+  len = sqrt((x1 - x2)**2);
+  k = [ 12*E*I/len**3    6*E*I/len**2   -12*E*I/len**3   6*E*I/len**2; ...
+         6*E*I/len**2    4*E*I/len       -6*E*I/len**2   2*E*I/len   ; ...
+       -12*E*I/len**3   -6*E*I/len**2    12*E*I/len**3  -6*E*I/len**2; ...
+         6*E*I/len**2    2*E*I/len       -6*E*I/len**2   4*E*I/len   ];
+endfunction
