@@ -1,6 +1,7 @@
 clear; close all; %initialization
 
-[nodes, elements, E, A, bcs, loads] = Tutorial_10_7();
+% [nodes, elements, E, A, bcs, loads] = Tutorial_10_7();
+[nodes, elements, E, A, bcs, loads] = Input_File_1();
 n = size(nodes,1);
 num_elements = size(elements,1);
 num_dof = 2*n;
